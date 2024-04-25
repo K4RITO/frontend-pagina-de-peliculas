@@ -1,0 +1,534 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+@keyframes latido {
+
+    0%,
+    50%,
+    100% {
+        transform: scale(1, 1);
+    }
+
+    30%,
+    80% {
+        transform: scale(0.92, 0.95);
+    }
+
+}
+
+
+.header {
+    background-color: #1a0663;
+    color: white;
+    height: 10vh;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+
+    .navegacion {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 40px;
+        margin-right: 40px;
+        padding: 1.5rem 0;
+
+        .anclaLogo {
+            text-decoration: none;
+            color: white;
+            font-weight: 700;
+            font-size: 1.2rem;
+
+            &:hover {
+                animation: latido 1s infinite;
+            }
+        }
+
+        .listaNav {
+            list-style: none;
+            display: flex;
+            align-items: center;
+
+            .listaItem {
+                margin-right: 20px;
+
+                .linkNav {
+                    text-decoration: none;
+                    color: white;
+                    font-weight: 700;
+                    font-size: 1.1rem;
+                    padding: 0.5rem 1rem;
+
+                    transition: transform 0.3s, box-shadow 0.3s;
+
+                    &:hover {
+                        transform: scale(0.95);
+                        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+                        border-radius: 5px;
+                    }
+                }
+
+                .linkNav.iniciarSesion {
+                    background-color: #5700bb;
+                    color: white;
+
+                    border-radius: 5px;
+
+                    transition: transform 0.3s, box-shadow 0.3s;
+
+                }
+            }
+
+        }
+    }
+
+}
+
+
+
+@media (max-width: 768px) {
+    .header {
+        height: initial;
+
+        .navegacion {
+            margin-left: 10px;
+            margin-right: 10px;
+            flex-direction: column;
+            row-gap: 20px;
+
+            .anclaLogo {
+                font-size: 1.2rem;
+                font-weight: 700;
+            }
+
+            .listaNav {
+
+                padding: initial;
+
+                .listaItem {
+                    .linkNav {
+                        font-weight: 400;
+                        margin-right: initial;
+                        font-size: 1rem;
+                        padding: 0.2rem;
+
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+
+.main {
+    .sectionPrincipal {
+        color: white;
+        background: linear-gradient(to right top, #0000008a, #0000008a), url(./assets/img/fondo.webp);
+        background-size: cover;
+        background-position: center;
+        height: 90vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        .tituloPrincipal {
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .subtituloPrincipal {
+            font-size: 2.2rem;
+            font-weight: 400;
+            margin-bottom: 1rem;
+        }
+
+        .botonRegistrarse {
+            background-color: #1a0663;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-decoration: none;
+           
+            transition: transform 0.3s, box-shadow 0.3s;
+
+            &:hover {
+                background-color: #1a0663;
+                transform: scale(0.95);
+                box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+            }
+        }
+    }
+
+    .buscadorPrincipal {
+        background-color: #181419;
+        color: white;
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .tituloSection {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .buscadorPeliculas {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 1rem;
+
+            .inputBuscador {
+                border: 2px solid white;
+                border-radius: 25px;
+                color: #000000;
+                font-size: 1.2rem;
+                height: 50px;
+                margin: 20px 0px;
+                outline: none;
+                padding: 0px 20px;
+                width: 500px;
+            }
+
+            .botonBuscador {
+                background-color: #1a0663;
+                display: inline-block;
+                color: white;
+                height: 50px;
+                margin: 20px 10px;
+                padding: 0 20px;
+                border-radius: 25px;
+                font-size: 1.2rem;
+                font-weight: 700;
+                border: 2px solid white;
+                text-align: center;
+                
+                transition: transform 0.3s, box-shadow 0.3s;
+
+                &:hover {
+                    background-color: #1a0663;
+                    transform: scale(0.95);
+                    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+                }
+            }
+        }
+
+    }
+
+    .peliculasTendencia {
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+        margin-top: 10px;
+
+        .tituloSection {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 40px;
+        }
+
+        .boton {
+            border: 1px solid white;
+            box-sizing: content-box;
+            margin-top: 50px;
+            margin-left: 20px;
+            background-color: #1a0663;
+            color: white;
+            padding: 1rem 1rem;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: 500;
+            text-decoration: none;
+            margin-bottom: 60px;
+
+
+        }
+    }
+
+    
+
+}
+
+@media (max-width: 768px) {
+    .main {
+        .sectionPrincipal {
+            height: 60vh;
+
+            .tituloPrincipal {
+                font-size: 2.5rem;
+            }
+
+            .subtituloPrincipal {
+                font-size: 1.5rem;
+            }
+
+            .botonRegistrarse {
+                padding: 0.8rem 1.5rem;
+                font-size: 1rem;
+            }
+        }
+
+        .buscadorPrincipal {
+            height: 30vh;
+
+            .tituloSection {
+                font-size: 1.6rem;
+            }
+
+            .buscadorPeliculas {
+                .inputBuscador {
+                    font-size: 1rem;
+                    height: 40px;
+                    width: 300px;
+                }
+
+                .botonBuscador {
+                    height: 40px;
+                    padding: 0 15px;
+                    font-size: 1rem;
+                }
+            }
+        }
+
+        
+
+        
+    }
+}
+
+
+.footer {
+    background-color: #1a0663;
+    color: white;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .listaNav {
+        list-style: none;
+        display: flex;
+        align-items: center;
+
+        .listaItem {
+            margin-left: 20px;
+
+            .linkNav {
+                text-decoration: none;
+                color: white;
+                font-weight: 700;
+                font-size: 1.2rem;
+            }
+
+            
+        }
+    }
+
+   
+}
+
+
+@media (max-width: 768px) {
+    .footer {
+        height: initial;
+        padding-top: 15px;
+        padding-bottom: 20px;
+
+        .listaNav {
+            flex-direction: column;
+
+            row-gap: 15px;
+
+            .listaItem {
+
+                .linkNav {
+                    font-size: 1rem;
+                }
+
+                
+            }
+        }
+    }
+}
+
+
+
+
+.bodyRegistrarse {
+    height: 100vh;
+    background: linear-gradient(to right top, #69149173, #8011db73), url("./assets/img/fondoregistro.jpg");
+    background-size: cover;
+    background-position: center;
+
+    .headerRegistrarse {
+        color: #ffffff;
+        height: 8vh;
+        padding: 30px;
+
+        .anclaLogo {
+            text-decoration: none;
+            color: white;
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+
+    }
+}
+
+.main {
+
+    
+    .seccionRegistrarse {
+        background-color: #383838;
+        
+        width: 30%;
+        margin: 0 auto;
+        border-radius: 5px;
+        padding: 40px 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 90vh;
+        font-size: 1.2rem;
+
+        .tituloRegistrarse {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+       
+        form {
+            width: 100%;
+            padding: 40px;
+
+            input:not(.check, .boton),
+            select {
+                width: 100%;
+                margin-bottom: 10px;
+                height: 40px;
+                padding: 0px 20px;
+                font-size: 1.2rem;
+                border-radius: 20px;
+                border: 2px solid #1a0663;
+                background-color: #6F0994;
+                outline: none;
+                color: white;
+            }
+
+
+
+            .terminos {
+                font-size: 1rem;
+                display: flex;
+                align-items: center;
+                margin-bottom: 20px;
+                color: white;
+
+                .textoCheck {
+                    margin-left: 10px;
+                }
+            }
+
+            .boton {
+                width: 87%;
+                box-sizing: content-box;
+                background-color: #1a0663;
+                border: 2px solid #1a0663;
+                color: white;
+                padding: 1rem 1rem;
+                border-radius: 5px;
+                font-size: 1rem;
+                font-weight: 500;
+
+            }
+
+            .ayuda {
+                margin-top: 40px;
+                font-size: 1rem;
+                text-decoration: none;
+                color: white;
+                font-weight: 400;
+
+            }
+        }
+
+    }
+
+}
+
+
+
+@media (max-width: 1200px) {
+    .bodyRegistrarse {
+        .headerRegistrarse {
+            padding: 20px;
+
+            .anclaLogo {
+                font-size: 1rem;
+            }
+        }
+
+        .main {
+            .seccionRegistrarse {
+                width: 80%;
+                padding: 10px 10px;
+
+                .tituloRegistrarse {
+                    font-size: 2rem;
+                }
+
+                form {
+                    width: 100%;
+                    text-align: center;
+
+                    input:not(.check, .boton),
+                    select {
+                        width: 80%;
+                        height: 35px;
+                        font-size: 1rem;
+                    }
+
+                    .terminos {
+                        width: 80%;
+                        margin: 0 auto;
+                        font-size: 1rem;
+                    }
+
+                    .boton {
+                        margin-top: 20px;
+                        margin-bottom: 20px;
+                        width: 70%;
+                        padding: 0.8rem 0.8rem;
+                        font-size: 1rem;
+                    }
+
+                    .ayuda {
+                        text-align: left;
+                        font-size: 1rem;
+                    }
+                }
+
+            }
+        }
+    }
+
+}
+
+
+
+
