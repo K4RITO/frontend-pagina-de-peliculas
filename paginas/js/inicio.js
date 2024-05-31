@@ -14,7 +14,7 @@ function enviarFormulario(){
 
 
     if (email.value === null || email.value === ''){
-        mensajesError.push('Ingresa tu Email*');
+        mensajesError.push('Ingresa tu email*');
 
     }
 
