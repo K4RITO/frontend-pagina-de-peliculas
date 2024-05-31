@@ -6,6 +6,8 @@ var fechaNacimiento = document.getElementById('fechaNacimiento')
 var pais = document.getElementById('pais');
 var terminos = document.getElementById('terminos');
 
+
+
 var error = document.getElementById('error');
 error.style.color ='red' ;
 
@@ -59,4 +61,5 @@ function enviarFormulario(){
 
    return false;
 }
+
 

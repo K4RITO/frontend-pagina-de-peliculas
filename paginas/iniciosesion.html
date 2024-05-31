@@ -20,24 +20,23 @@
                 <h2 class="tituloRegistrarse">Iniciar Sesión</h2>
                 <div>
                     <input type="text" placeholder="Email"  id="Email" name="Email">
-                    <div class="error-text"></div>
-                </div>
+                   
                 <div>
                     <input type="text" placeholder="Contraseña"  id="Contraseña" name="Contraseña">
-                    <div class="error-text"></div>
+                    
                 </div>
                 
                 <div>
-                    <input class="boton" type="submit" value="Iniciar Sesión">
+                    <input class="boton" type="submit" onclick = 'return enviarFormulario();' value="Iniciar Sesión">
                 </div>
+                <div id="error"></div>
                 <div>
                     <a class="ayuda" href="./Registrarse.html">Registrarse</a>
                 </div>
             </form>
         </section>
     </main>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-   <script src="../js/valida_registrarse.js"></script>
+    <script src="./js/inicio.js"></script>
 </body>
     
 
